@@ -1,11 +1,102 @@
 /* Base HTML Styles */
-@import url("https://fonts.googleapis.com/css2?family=Inter&family=Rubik:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* base colours */
 
 :root {
-  --brand: #8246af;
-  --action: #ffa300;
+  --brand: #131200;
+  --action: #D0CFCF;
   --white: #ffffff;
-  --base-light: #cdb5df;
-  --base-dark: #0d0711;
+  --base-light: #F7EBE8;
+  --base-dark: #131200;
   --black: #111111;
+}
+
+/* CSS reset */
+
+html {
+  box-sizing: border-box                /* Makes width/height include padding & border */
+  font-size: 10px;                      /* Sets base font size */
+  font-family: "Elms Sans", sans-serif  /* Sets default font for the page */
+  color: var(--black);                  /* Text color using a CSS variable */
+  scroll-behavior: smooth;              /* Enables smooth scrolling for anchor links */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;                  /* Makes all elements inherit the box sizing */
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Saira', sans-serif;     /* Setting the font for headings */
+}
+
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, figure {   
+  margin: 0;                            /* Remove default margin and padding */
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;                     /* Set a comfortable line height */
+}
+
+ul, ol {
+  list-style:none                       /* Remove list styles */
+}
+
+img {
+  max-width: 100%;                      /* make images responsive */
+  height: auto;
+}
+
+input, button, textarea, select {
+  font: inherit;                        /* Elements inherit font */
+}
+
+/* circle image css */
+
+.profile-image {
+  width: 200px;       /* Set desired size */
+  height: 200px;      /* Make width and height equal for a perfect circle */
+  border-radius: 50%; /* Creates the circular shape */
+  object-fit: cover;  /* Ensures the image fills the circle without squishing - I NEED TO CHECK THE QUALITY */
+  margin-top: 30px;
+  border: 3px solid #111111;
+}
+
+.profile-details-container {
+  width: 300px;
+  border: 10px solid #111111;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-details-container h1 {
+  align-self: center;
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+.desktop-nav a {
+  text-decoration: none;
+  color: #111111;
+  display: flex;
+  margin: 30px;
+  padding-inline: 64px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 2px solid #111111;
+  border-bottom: 2px solid #111111;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.social-icons{
+  margin-top: 50px;
 }
