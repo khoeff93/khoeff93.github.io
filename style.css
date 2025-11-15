@@ -14,12 +14,14 @@
 
 /* CSS reset */
 
-html {
-  box-sizing: border-box                /* Makes width/height include padding & border */
-  font-size: 10px;                      /* Sets base font size */
-  font-family: "Elms Sans", sans-serif  /* Sets default font for the page */
+body {
+  box-sizing: border-box;               /* Makes width/height include padding & border */
+  font-size: 12px;                      /* Sets base font size */
+  font-family: "Elms Sans", sans-serif;  /* Sets default font for the page */
   color: var(--black);                  /* Text color using a CSS variable */
   scroll-behavior: smooth;              /* Enables smooth scrolling for anchor links */
+  background: #ffffff;
+  background: linear-gradient(260deg,rgba(255, 255, 255, 1) 0%, rgba(235, 235, 235, 1) 16%);
 }
 
 *,
@@ -56,6 +58,7 @@ input, button, textarea, select {
   font: inherit;                        /* Elements inherit font */
 }
 
+
 /* circle image css */
 
 .profile-image {
@@ -64,39 +67,203 @@ input, button, textarea, select {
   border-radius: 50%; /* Creates the circular shape */
   object-fit: cover;  /* Ensures the image fills the circle without squishing - I NEED TO CHECK THE QUALITY */
   margin-top: 30px;
-  border: 3px solid #111111;
+  border: 5px solid #111111;
 }
 
 .profile-details-container {
   width: 300px;
-  border: 10px solid #111111;
+  height: 100vh;
+  border: 3px solid #111111;
+  padding-left: 15px;
+  padding-right: 15px;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+}
+
+.profile-top-nav-container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;  
 }
 
 .profile-details-container h1 {
   align-self: center;
   font-size: 20px;
-  margin-top: 5px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .desktop-nav a {
   text-decoration: none;
   color: #111111;
   display: flex;
-  margin: 30px;
+  margin: 10px;
   padding-inline: 64px;
   padding-top: 5px;
   padding-bottom: 5px;
   border: 2px solid #111111;
+  border-top: 5px solid #111111;
+  border-right: 5px solid #111111;
   border-bottom: 2px solid #111111;
   border-radius: 10px;
   justify-content: center;
 }
 
-.social-icons{
-  margin-top: 50px;
+.hamburger-button {
+  border: none;
+  background-color: rgba(235, 235, 235, 0);
+}
+
+.hamburger-icon {
+  height: 40px;
+}
+
+.social-icon{
+  width: 40px;
+  height: 40px;
+  margin-bottom: 30px;
+}
+
+.flex-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-about-me-container{
+  height: 100vh;
+  padding-top: 43px;
+  border-right: 3px solid #111111;
+  border-top: 3px solid #111111;
+  border-bottom: 3px solid #111111;
+}
+
+.profile-about-me-container p{
+  margin-bottom: 15px;
+  margin-left: 40px;
+  margin-right: 60px;
+  font-size: 16px;
+}
+
+/* Mobile build */
+
+/* Profile picture */
+
+@media (min-width: 768px) {
+  .profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 30px;
+  border: 5px solid #111111;
+}
+}
+
+/* Mobile Side bar container size */
+
+@media (max-width: 768px) {
+  .profile-details-container {
+  width: 100vw;
+  height:30%;
+  border: 3px solid #111111;
+  padding-left: 10px;
+  padding-right: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  }
+}
+
+/* Mobile side bar container h1 size */
+
+@media (max-width: 768px) {
+  .profile-details-container h1 {
+  }
+}
+
+/* Mobile side bar container h1 size */
+
+@media (max-width: 768px) {
+  .profile-details-container h1 {
+  }
+}
+
+/* Desktop nav disappearing and appearing */
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+}
+
+/* Mobile: Remove LinkedIn icon from header */
+
+@media (min-width: 768px) {
+  .profile-about-me-container .social-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+ .social-icon {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+  }
+}
+
+@media (max-width: 768px) {
+.profile-details-container .social-icon {
+  display: none;
+ }
+}
+
+/* Mobile nav disappearing and appearing */
+
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+
+/* Mobile hamburger appearing */
+
+@media (min-width: 768.5px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+/* P moving below on mobile */
+
+@media (min-width: 768.5px) {
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/* Mobile about me container changes */
+
+@media (max-width:768.5px) {
+  .profile-about-me-container{
+    padding-top: 43px;
+    border-right: 3px solid #111111;
+    border-left: 3px solid #111111;
+    height: 100%;
+  }
+}
+
+@media (max-width: 768.5px) {
+  .profile-about-me-container footer{
+    flex:display;
+    margin-top: 150px;
+  }
 }
