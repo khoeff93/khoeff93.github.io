@@ -1,12 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Kate Hoeffler</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    
+    <div class="flex-container">
+            <div class="profile-details-container">
+                <div class="profile-top-nav-container">
+                     <img
+                        class="profile-image"
+                        src="img/Kate-hat.jpg"
+                        alt="Avatar"
+                     />
+                    <h1 class="profile-name">Kate Hoeffler</h1>
+                    <nav class="desktop-nav" aria-label="primary">
+                        <ul>
+                            <li>
+                                <a href="/home.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="/projects.html">Projects</a>
+                            </li>
+                            <li>
+                                <a href="/contact.html" class="active">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="hamburger">
+                        <button type="button" class="hamburger-button">
+                            <img class="hamburger-icon" src="img/hamburger.svg" alt="b+w hamburger icon"/>
+                        </button>
+                    </div>
+                    <nav class="mobile-nav" aria-label="primary">
+                        <ul>
+                            <li>
+                                <a href="/home.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="/projects.html">Projects</a>
+                            </li>
+                            <li>
+                                <a href="/contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="profile-bottom-nav-container">
+                    <footer>
+                        <a href="https://www.linkedin.com/in/kate-hoeffler-0a447080/">
+                            <img class="social-icon" src="img/linkedin.svg"
+                                alt="LinkedIn">
+                        </a>
+                    </footer>
+                </div>
+            </div> 
+        <div class="profile-about-me-container">
+            <section class="contact">
+                    <p>
+                        Drop me a message...
+                    </p>
+                    <p>  
+                        I'm eagerly awaiting to get on with my next project
+                    </p>
+                <div class="contact-form-container">
+                    <form class="contact-form">
+                        <label for="your-name">Name</label>
+                        <input type="text" id="your-name" placeholder="Jane Doe">
+                        <label for="your-email">Email</label>
+                        <input type="text" id="your-email" placeholder="jane.doe@gmail.com">
+                        <label for="message">Your Message</label>
+                        <textarea name="message-text" id="message" rows="10" placeholder="Let me know how you want to collab.."></textarea>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </section>
+                <footer>
+                  <a href="https://www.linkedin.com/in/kate-hoeffler-0a447080/">
+                      <img class="social-icon" src="img/linkedin.svg"
+                      alt="LinkedIn">
+                   </a>
+                </footer>
+        </div>
+    </div>
 </body>
+
 </html>

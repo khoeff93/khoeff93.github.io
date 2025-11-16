@@ -16,7 +16,7 @@
 
 body {
   box-sizing: border-box;               /* Makes width/height include padding & border */
-  font-size: 12px;                      /* Sets base font size */
+  font-size: 14px;                      /* Sets base font size */
   font-family: "Elms Sans", sans-serif;  /* Sets default font for the page */
   color: var(--black);                  /* Text color using a CSS variable */
   scroll-behavior: smooth;              /* Enables smooth scrolling for anchor links */
@@ -96,7 +96,8 @@ input, button, textarea, select {
 
 .desktop-nav a {
   text-decoration: none;
-  color: #111111;
+  color:#111111;
+  background: #ffffff;
   display: flex;
   margin: 10px;
   padding-inline: 64px;
@@ -108,6 +109,16 @@ input, button, textarea, select {
   border-bottom: 2px solid #111111;
   border-radius: 10px;
   justify-content: center;
+}
+
+a:hover {
+  background: #706e6e;
+  color: #ffffff;
+}
+
+.desktop-nav .active {
+  background: #706e6e;
+  color: #ffffff;
 }
 
 .hamburger-button {
@@ -132,6 +143,7 @@ input, button, textarea, select {
 
 .profile-about-me-container{
   height: 100vh;
+  width: 100%;
   padding-top: 43px;
   border-right: 3px solid #111111;
   border-top: 3px solid #111111;
@@ -145,11 +157,69 @@ input, button, textarea, select {
   font-size: 16px;
 }
 
+/* .contact-form */
+
+.contact-form-container {
+  display: flex;              
+  justify-content: center;
+  align-items: center; 
+  width: 100%;
+}
+
+.contact-form {
+  border-radius: 10px;
+  font-size: 16px;
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  max-width: 1500px;
+  padding: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.contact-form input,
+.contact-form select {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 2px solid #111111;
+}
+
+.contact-form textarea {
+  display: flex;
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #111111;
+}
+
+.contact-form label {
+  display: block;
+  width: 100%;
+}
+
+.contact-form input[type="submit"] {
+  background: #ffffff;
+  border: 2px solid #111111;
+  border-top: 5px solid #111111;
+  border-right: 5px solid #111111;
+  border-bottom: 2px solid #111111;
+  border-radius: 10px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.contact-form input[type="submit"]:active {
+  background: #706e6e;
+  color: #ffffff;
+}
+
 /* Mobile build */
 
 /* Profile picture */
 
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   .profile-image {
   width: 200px;
   height: 200px;
@@ -162,7 +232,7 @@ input, button, textarea, select {
 
 /* Mobile Side bar container size */
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .profile-details-container {
   width: 100vw;
   height:30%;
@@ -177,21 +247,21 @@ input, button, textarea, select {
 
 /* Mobile side bar container h1 size */
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .profile-details-container h1 {
   }
 }
 
 /* Mobile side bar container h1 size */
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .profile-details-container h1 {
   }
 }
 
 /* Desktop nav disappearing and appearing */
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .desktop-nav {
     display: none;
   }
@@ -199,13 +269,13 @@ input, button, textarea, select {
 
 /* Mobile: Remove LinkedIn icon from header */
 
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   .profile-about-me-container .social-icon {
     display: none;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
  .social-icon {
     display: flex;
     flex-direction: column;
@@ -213,7 +283,7 @@ input, button, textarea, select {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
 .profile-details-container .social-icon {
   display: none;
  }
@@ -221,13 +291,13 @@ input, button, textarea, select {
 
 /* Mobile nav disappearing and appearing */
 
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   .mobile-nav {
     display: none;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .mobile-nav {
     display: none;
   }
@@ -235,7 +305,7 @@ input, button, textarea, select {
 
 /* Mobile hamburger appearing */
 
-@media (min-width: 768.5px) {
+@media (min-width: 700px) {
   .hamburger {
     display: none;
   }
@@ -243,7 +313,7 @@ input, button, textarea, select {
 
 /* P moving below on mobile */
 
-@media (min-width: 768.5px) {
+@media (min-width: 700px) {
   .flex-container {
     display: flex;
     flex-direction: row;
@@ -252,7 +322,7 @@ input, button, textarea, select {
 
 /* Mobile about me container changes */
 
-@media (max-width:768.5px) {
+@media (max-width:700px) {
   .profile-about-me-container{
     padding-top: 43px;
     border-right: 3px solid #111111;
@@ -261,9 +331,35 @@ input, button, textarea, select {
   }
 }
 
-@media (max-width: 768.5px) {
+@media (max-width: 700px) {
   .profile-about-me-container footer{
     flex:display;
     margin-top: 150px;
   }
+}
+
+/* Loading screen */
+
+.loader {
+  border: 16px solid #D0CFCF;
+  border-radius: 50%;
+  border-top: 16px solid #111111;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
