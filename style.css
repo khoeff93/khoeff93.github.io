@@ -340,6 +340,11 @@ a:hover {
 
 /* Loading screen */
 
+/*HTML*/
+    <div class="loader"></div>
+
+/*CSS*/
+
 .loader {
   border: 16px solid #D0CFCF;
   border-radius: 50%;
